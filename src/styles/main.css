@@ -1361,6 +1361,119 @@ font-size:34px;
     width: 100%;
     padding: 20px;
   }
+}/* ============================= */
+/* 🔥 MOBILE RESPONSIVENESS FIX */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  /* HERO SECTION */
+  .home-hero {
+    height: 60vh !important;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  /* DOTS */
+  .dots {
+    bottom: 10px;
+  }
+
+  /* FEATURES SECTION */
+  .home-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .feature-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  /* GALLERY GRID */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  /* DETAILS PAGE */
+  .details-card {
+    flex-direction: column;
+  }
+
+  .details-image img {
+    width: 100%;
+  }
+
+  .details-content {
+    padding: 15px;
+  }
+
+  /* RELATED */
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* CONTACT FORM */
+  .contact-container {
+    padding: 20px;
+  }
+
+  .contact-box {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .footer-content p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
 }
 .details-card {
   display: flex;
