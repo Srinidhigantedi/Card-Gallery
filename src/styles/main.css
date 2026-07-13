@@ -1214,37 +1214,35 @@ font-size:34px;
 .related-card:hover {
   transform: scale(1.05);
 }
-/* ================= RESPONSIVE DESIGN ================= */
+/* ========================================= */
+/* ✅ FINAL RESPONSIVE FIX (ADD AT VERY END) */
+/* ========================================= */
 
-/* ===== TABLET (768px) ===== */
+/* ===== TABLET ===== */
 @media (max-width: 768px) {
 
   /* NAVBAR */
   .navbar {
-    flex-wrap: wrap;
-    padding: 10px 20px;
-    gap: 10px;
+    flex-direction: column;
+    padding: 10px;
   }
 
   .search-bar {
     width: 100%;
-    order: 3;
   }
 
   .nav-links {
-    width: 100%;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: center;
   }
 
   /* HERO */
   .home-hero {
-    height: 60vh;
+    height: 60vh !important;
   }
 
   .hero-content h1 {
-    font-size: 26px;
+    font-size: 24px !important;
   }
 
   .hero-content p {
@@ -1258,12 +1256,13 @@ font-size:34px;
 
   /* DETAILS */
   .details-card {
-    flex-direction: column;
+    flex-direction: column !important;
+    display: flex !important;
   }
 
   .details-image img {
     height: 250px;
-    object-fit: cover;
+    min-height: unset;
   }
 
   /* FEATURES */
@@ -1273,7 +1272,7 @@ font-size:34px;
 }
 
 
-/* ===== MOBILE (480px) ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 480px) {
 
   /* NAVBAR */
@@ -1284,20 +1283,15 @@ font-size:34px;
   .nav-links {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
   }
 
   /* HERO */
   .home-hero {
-    height: 55vh;
-  }
-
-  .hero-content {
-    padding: 0 15px;
+    height: 55vh !important;
   }
 
   .hero-content h1 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .hero-content p {
@@ -1309,169 +1303,47 @@ font-size:34px;
     font-size: 14px;
   }
 
-  /* DOTS */
-  .dots {
-    bottom: 10px;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-  }
-
   /* GALLERY */
-  .gallery-title {
-    font-size: 22px;
-    text-align: center;
-  }
-
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 
-  .filters {
-    justify-content: center;
+  .gallery-title {
+    text-align: center;
+    font-size: 22px;
   }
 
   /* CARD */
-  .card img {
+  .image-container {
     height: 160px;
   }
 
   /* DETAILS */
   .details-content h1 {
-    font-size: 20px;
+    font-size: 22px !important;
   }
 
   .info-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr !important;
   }
 
   /* FEATURES */
   .home-features {
-    grid-template-columns: 1fr;
-  }
-
-  .feature-card {
-    padding: 15px;
+    grid-template-columns: 1fr !important;
   }
 
   /* CONTACT */
   .contact-box {
-    width: 100%;
-    padding: 20px;
-  }
-}/* ============================= */
-/* 🔥 MOBILE RESPONSIVENESS FIX */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-  /* NAVBAR */
-  .navbar {
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-
-  .search-bar {
-    width: 100%;
-    margin-top: 8px;
-  }
-
-  /* HERO SECTION */
-  .home-hero {
-    height: 60vh !important;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .hero-content {
-    padding: 20px;
-    text-align: center;
-  }
-
-  .hero-content h1 {
-    font-size: 22px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .hero-btn {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
-
-  /* DOTS */
-  .dots {
-    bottom: 10px;
-  }
-
-  /* FEATURES SECTION */
-  .home-features {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .feature-card {
-    width: 90%;
-    padding: 20px;
-  }
-
-  /* GALLERY GRID */
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    padding: 10px;
-  }
-
-  /* DETAILS PAGE */
-  .details-card {
-    flex-direction: column;
-  }
-
-  .details-image img {
-    width: 100%;
-  }
-
-  .details-content {
-    padding: 15px;
-  }
-
-  /* RELATED */
-  .related-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* CONTACT FORM */
-  .contact-container {
-    padding: 20px;
-  }
-
-  .contact-box {
-    width: 100%;
     padding: 20px;
   }
 
   /* FOOTER */
   .footer {
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  .footer-content p {
-    font-size: 13px;
-    line-height: 1.6;
+    padding: 15px 10px;
   }
 
 }
@@ -1534,4 +1406,14 @@ font-size:34px;
 }
 .footer {
   border-top: 1px solid rgba(255,255,255,0.08);
+}
+/* 🔥 FINAL OVERRIDE FIX */
+.details-card {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .details-card {
+    flex-direction: column !important;
+  }
 }
