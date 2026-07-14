@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import products from "../data/data";
 
 function Home() {
-  const images = products.map((item) => item.image);
+  const images = [
+  products[0].image,   // New York
+  products[5].image,   // Dog
+  products[10].image,  // Laptop
+  products[15].image,  // Parrot
+];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
