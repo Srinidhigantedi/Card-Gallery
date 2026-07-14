@@ -395,19 +395,18 @@ body {
 .home-hero{
     position:relative;
     min-height:700px;
-
+    height:85vh;
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
-
+    background-color:#111;
     display:flex;
     align-items:center;
     justify-content:center;
-
     overflow:hidden;
 }
-/* DARK OVERLAY */
 
+/* DARK OVERLAY */
 .overlay{
     position:absolute;
     inset:0;
@@ -1259,11 +1258,7 @@ font-size:34px;
 }
 
 
-@media (max-width: 768px) {
-  .details-card {
-    flex-direction: column !important;
-  }
-}
+
 
 @media (max-width:768px){
 
@@ -1272,7 +1267,7 @@ font-size:34px;
 }
 
 .hero-content h1{
-    font-size:38px;
+    font-size:34px;
 }
 
 .hero-content p{
@@ -1280,10 +1275,31 @@ font-size:34px;
 }
 
 .hero-btn{
-    padding:12px 26px;
+    padding:14px 28px;
 }
 .dots{
     bottom:15px;
+}
+.navbar{
+    padding:15px;
+}
+
+.nav-links{
+    display:flex;
+    gap:15px;
+    font-size:14px;
+}
+
+.menu-icon{
+    display:none;
+}
+
+.search-box{
+    width:170px;
+}
+
+.logo{
+    font-size:22px;
 }
 
 }
