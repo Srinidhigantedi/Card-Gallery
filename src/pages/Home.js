@@ -4,11 +4,12 @@ import products from "../data/data";
 
 function Home() {
   const images = [
-  products[0].image,   // New York
-  products[5].image,   // Dog
-  products[10].image,  // Laptop
-  products[15].image,  // Parrot
-];
+    products[0].image,
+    products[8].image,
+    products[11].image,
+    products[17].image,
+  ];
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -26,7 +27,7 @@ function Home() {
       <div
         className="home-hero"
         style={{
-          backgroundImage: `url(${images[index]})`
+          backgroundImage: `url(${images[index]})`,
         }}
       >
         <div className="overlay"></div>
@@ -46,14 +47,16 @@ function Home() {
         {/* DOTS */}
         <div className="dots">
           {images.map((_, i) => (
-            <span key={i} className={i === index ? "dot active" : "dot"}></span>
+            <span
+              key={i}
+              className={i === index ? "dot active" : "dot"}
+            ></span>
           ))}
         </div>
       </div>
 
-      {/* 🔥 PREMIUM FEATURES SECTION (THIS IS WHAT YOU WANT) */}
+      {/* 🔥 PREMIUM FEATURES SECTION */}
       <div className="home-features">
-
         <div className="feature-card">
           <div className="feature-icon">✨</div>
           <h3>Premium UI</h3>
@@ -71,7 +74,6 @@ function Home() {
           <h3>Smart Filters</h3>
           <p>Find exactly what you need instantly</p>
         </div>
-
       </div>
 
     </div>
