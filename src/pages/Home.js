@@ -7,7 +7,7 @@ function Home() {
     products[0].image,
     products[8].image,
     products[11].image,
-    products[17].image,
+    products[19].image,
   ];
 
   const [index, setIndex] = useState(0);
@@ -24,36 +24,38 @@ function Home() {
     <div className="home">
 
       {/* 🔥 HERO SLIDER */}
-      <div
-        className="home-hero"
-        style={{
-          backgroundImage: `url(${images[index]})`,
-        }}
-      >
-        <div className="overlay"></div>
+      <div className="home-hero">
 
-        <div className="hero-content">
-          <h1 className="fade-in">Discover Stunning Collections</h1>
+  <img
+    src={images[index]}
+    alt="Slider"
+    className="hero-image"
+  />
 
-          <p className="fade-in delay">
-            Explore Travel, Animals, Birds & Technology in one place
-          </p>
+  <div className="overlay"></div>
 
-          <Link to="/gallery" className="hero-btn">
-            Explore Gallery
-          </Link>
-        </div>
+  <div className="hero-content">
+    <h1 className="fade-in">Discover Stunning Collections</h1>
 
-        {/* DOTS */}
-        <div className="dots">
-          {images.map((_, i) => (
-            <span
-              key={i}
-              className={i === index ? "dot active" : "dot"}
-            ></span>
-          ))}
-        </div>
-      </div>
+    <p className="fade-in delay">
+      Explore Travel, Animals, Birds & Technology in one place
+    </p>
+
+    <Link to="/gallery" className="hero-btn">
+      Explore Gallery
+    </Link>
+  </div>
+
+  <div className="dots">
+    {images.map((_, i) => (
+      <span
+        key={i}
+        className={i === index ? "dot active" : "dot"}
+      ></span>
+    ))}
+  </div>
+
+</div>
 
       {/* 🔥 PREMIUM FEATURES SECTION */}
       <div className="home-features">
